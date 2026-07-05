@@ -20,8 +20,8 @@ ALLOWED_BROKEN = {
     ("09-案例库/案例模板.md", "../案例模板.md"),
 }
 
-# 需要 front matter 的文件范围之外的例外
-FRONT_MATTER_EXEMPT = {"CLAUDE.md"}
+# 需要 front matter 的文件范围之外的例外（AGENTS.md 是 CLAUDE.md 的符号链接）
+FRONT_MATTER_EXEMPT = {"CLAUDE.md", "AGENTS.md"}
 
 REQUIRED_KEYS = ("title", "chapter", "layer", "domain", "updated")
 
