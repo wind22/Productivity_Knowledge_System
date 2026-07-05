@@ -1,0 +1,17 @@
+name: 知识库质量检查
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 校验相对链接与 front matter
+        run: python3 scripts/check_links.py
